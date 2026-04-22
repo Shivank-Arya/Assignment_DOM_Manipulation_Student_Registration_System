@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration System</title>
-    <script src="./index.js" defer></script>
-    <link href="./style.css" rel="stylesheet">
+    <!-- <link href="./style.css" rel="stylesheet"> -->
+    <script src="./index.js " defer></script>
+
 </head>
+
 <body>
-    <h1 class="text-3xl font-bold underline bg-blue-500">
-    Hello world!
-  </h1>
+    <h1>Student Registration Form</h1>
+    <form id="studentForm">
+        <div class="field">
+            <label>Student Name</label>
+            <input type="text" id="name" placeholder="" required>
+        </div>
+        <div class="field">
+            <label>Student ID</label>
+            <input type="text" id="studentID" placeholder="" required>
+        </div>
+        <div class="field">
+            <label>Class</label>
+            <input type="number" id="studentClass" min="1" max="12" required>
+        </div>
+        <div class="field">
+            <label>Roll Number (1-40)</label>
+            <input type="number" id="rollNo" min="1" max="40" required>
+        </div>
+        <div class="field">
+            <label>Contact Number</label>
+            <input type="tel" id="contact" required>
+        </div>
+        <div class="field">
+            <label>Address</label>
+            <textarea id="address" rows="3" required></textarea>
+        </div>
+        <button type="submit">Register Student</button>
+    </form>
+    
+    <h2>Registered Students</h2>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Roll No</th>
+                <th>Contact</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    
 </body>
+
 </html>
