@@ -6,56 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration System</title>
     <!-- <link href="./style.css" rel="stylesheet"> -->
-    <script src="./index.js " defer></script>
-
+    <script src="./index.js" defer></script>
 </head>
 
 <body>
-    <h1>Student Registration Form</h1>
-    <form id="studentForm">
-        <div class="field">
-            <label>Student Name</label>
-            <input type="text" id="name" placeholder="" required>
-        </div>
-        <div class="field">
-            <label>Student ID</label>
-            <input type="text" id="studentID" placeholder="" required>
-        </div>
-        <div class="field">
-            <label>Class</label>
-            <input type="number" id="studentClass" min="1" max="12" required>
-        </div>
-        <div class="field">
-            <label>Roll Number (1-40)</label>
-            <input type="number" id="rollNo" min="1" max="40" required>
-        </div>
-        <div class="field">
-            <label>Contact Number</label>
-            <input type="tel" id="contact" required>
-        </div>
-        <div class="field">
-            <label>Address</label>
-            <textarea id="address" rows="3" required></textarea>
-        </div>
-        <button type="submit">Register Student</button>
-    </form>
-    
-    <h2>Registered Students</h2>
-    <table id="studentTable">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Class</th>
-                <th>Roll No</th>
-                <th>Contact</th>
-                <th>Address</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-    
+<header>
+        <h1>Student Registration Portal</h1>
+        <p>
+            Welcome to the official enrollment form. Please ensure all details, especially the 
+            <strong>Student ID</strong> and <strong>Roll Number</strong>, are accurate. 
+        </p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Registration Form</h2>
+            
+            <form id="studentForm">
+                <div>
+                    <label for="name">Full Student Name</label>
+                    <input type="text" id="name" placeholder="e.g. John Doe" required>
+                </div>
+
+                <div>
+                    <label for="studentID">Student ID</label>
+                    <input type="text" id="studentID" placeholder="STU-2026-001" required>
+                </div>
+
+                <div>
+                    <label for="studentClass">Class (Grade)</label>
+                    <input type="number" id="studentClass" min="1" max="12" placeholder="1-12" required>
+                </div>
+
+                <div>
+                    <label for="rollNo">Roll Number (1-40)</label>
+                    <input type="number" id="rollNo" min="1" max="40" placeholder="1-40" required>
+                </div>
+
+                <div>
+                    <label for="contact">Contact Number</label>
+                    <input type="tel" id="contact" placeholder="+91 00000-00000" required>
+                </div>
+
+                <div>
+                    <label for="address">Residential Address</label>
+                    <textarea id="address" rows="3" placeholder="Enter complete address..." required></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Register Student</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <div>
+                <h2>Registered Students</h2>
+                <span>Local Records</span>
+            </div>
+            
+            <div>
+                <table id="studentTable" border="1">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Roll No</th>
+                            <th>Contact</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+            
+            <div id="emptyState" style="display: none;">
+                No students registered yet.
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
